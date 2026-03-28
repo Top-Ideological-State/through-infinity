@@ -1,2 +1,2 @@
-# biodynamic-micro-state
-### through-infinity
+# Biodynamic Micro State
+#Through Infinity
