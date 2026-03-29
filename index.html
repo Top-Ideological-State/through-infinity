@@ -3,75 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Top-Ideological-State</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            background-color: black;
-        }
-
-        .container {
-            position: relative;
-            width: 100vw;
-            height: 100vh;
-        }
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        .text-overlay {
-            position: absolute;
-            top: 10%; /* Napisy będą u góry strony */
-            left: 5%; /* Margines z lewej strony */
-            color: white;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
-        }
-
-        h1 {
-            font-size: 5vw;
-            margin: 0;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        h3 {
-            font-size: 2vw;
-            margin: 0;
-            font-weight: 300;
-            opacity: 0.9;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="container">
-        <img src="cosmos.jpg" alt="Cosmos Background">
-        
-        <div class="text-overlay">
-            <h1>Top-Ideological-State</h1>
-            <h3>Through Infinity</h3>
-        </div>
-    </div>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Through Infinity</title>
     <style>
-        /* Usuwamy marginesy i blokujemy przewijanie */
         body, html {
             margin: 0;
             padding: 0;
@@ -79,35 +12,70 @@
             width: 100%;
             overflow: hidden;
             background-color: black;
+            font-family: sans-serif;
         }
 
-        /* Tło na całą stronę */
-        .container {
+        /* Tło strony */
+        .main-container {
             background-image: url('cosmos.jpg');
             background-size: cover;
             background-position: center;
             height: 100vh;
             width: 100vw;
             display: flex;
-            justify-content: center; /* Środek w poziomie */
-            align-items: center;    /* Środek w pionie */
+            flex-direction: column; /* Układ pionowy: napisy na górze, guzik niżej */
+            position: relative;
         }
 
-        /* Sam guzik */
-        .guzik {
-            display: block;
-            width: 300px; /* Możesz tu zmienić rozmiar kuli */
+        /* Styl napisów (lewy górny róg) */
+        .header {
+            padding: 40px;
+            color: white;
+            z-index: 2;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .header p {
+            font-size: 1.5rem;
+            margin: 5px 0 0 0;
+            opacity: 0.8;
+        }
+
+        /* Kontener na guzik (środek ekranu) */
+        .button-wrapper {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Idealne wyśrodkowanie */
+            z-index: 1;
+        }
+
+        .guzik-img {
+            width: 250px; /* Rozmiar Twojej kuli */
             height: auto;
-            border: none;
-            outline: none;
+            display: block;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <img src="button1.png" alt="Guzik" class="guzik">
+    <div class="main-container">
+        <div class="header">
+            <h1>TOP-IDEOLOGICAL-STATE</h1>
+            <p>Through infinity</p>
+        </div>
+
+        <div class="button-wrapper">
+            <img src="button1.png" alt="Guzik" class="guzik-img">
+        </div>
     </div>
 
 </body>
 </html>
+
